@@ -217,4 +217,9 @@ section{
     .test__counter{
         white-space: nowrap;
     }
+    .tests__preview{
+        font-size: 14px;
+        line-height: 100%;
+        padding: 0 20px;
+    }
 }
