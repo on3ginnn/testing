@@ -48,7 +48,7 @@ h1{
     font-family: var(--montserrat-medium);
 }
 .test_tip:before{
-    content: url(/static/img/i.svg);
+    content: url(../img/i.svg);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -176,8 +176,9 @@ section{
         border-radius: 0;
     }
     .test__tip{
-        text-transform: lowercase;
+        font-size: 14px;
         padding: 10px 10px;
+        line-height: 100%;
     }
     .test_tip{
         padding-left: 40px;
