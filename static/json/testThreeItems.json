@@ -1,0 +1,502 @@
+[
+    {
+        "question": "Если бы я сказал, что небо находится внизу, а зимой жарко, я должен был бы назвать преступника:",
+        "answers": [
+            {
+                "content": "бандитом",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "святым",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "тучей",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Когда я ложусь спать, я:",
+        "answers": [
+            {
+                "content": "засыпаю быстро",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нечто среднее",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "засыпаю с трудом",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если мне кто-нибудь нагрубит, я могу быстро забыть об этом:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мне больше нравятся новые способы выполнения какой-либо работы, чем придерживаться испытанных приемов:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я думаю, что я менее чувствительный и менее возбудимый, чем большинство людей:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "затрудняюсь сказать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Меня раздражают люди, которые не могут быстро принимать решения:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я думаю, что слово, противоположное по смыслу слову «неточный», - это:",
+        "answers": [
+            {
+                "content": "небрежный",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "тщательный",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "приблизительный",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "У меня всегда хватает энергии, когда это мне необходимо:",
+        "answers": [
+            {
+                "content": "да",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "трудно сказать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Меня волнуют мои прошлые поступки и ошибки:",
+        "answers": [
+            {
+                "content": "да",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Какое слово не связано с другими словами:",
+        "answers": [
+            {
+                "content": "кошка",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "близко",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "солнце",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я никогда не чувствую себя таким несчастным, что хочется плакать:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Усилия, затраченные на составление планов:",
+        "answers": [
+            {
+                "content": "никогда не лишние",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "никогда не лишние",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не стоят этого",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Необдуманные поступки и высказывания моих приятелей в мой адрес не обижают и не огорчают меня:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "То, что я делаю, у меня не получается:",
+        "answers": [
+            {
+                "content": "редко",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "часто",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если человек не отвечает сразу же после того, как я что-нибудь сказал ему, то я чувствую, что, должно быть, сказал какую-нибудь глупость:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "неверно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "В школьные годы я больше всего получаю знаний:",
+        "answers": [
+            {
+                "content": "на уроках",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "трудно сказать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "читая книги, из информации в Интернете и др.",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "У меня возникают сильные эмоции: тревога, гнев, приступы смеха и т. п., казалось бы, без всякой причины:",
+        "answers": [
+            {
+                "content": "да",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Все несчастья происходят из-за людей:",
+        "answers": [
+            {
+                "content": "которые стараются во все внести изменения, хотя уже существуют удовлетворительные способы решения этих вопросов",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не знаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "которые отвергают новые, многообещающие предложения",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Аккуратные, требовательные люди не уживаются со мной:",
+        "answers": [
+            {
+                "content": "верно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если стрелки часов встречаются ровно через каждые 65 минут, отмеренные по точным часам, то эти часы:",
+        "answers": [
+            {
+                "content": "отстают",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "идут правильно",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "спешат",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мне бывает скучно:",
+        "answers": [
+            {
+                "content": "часто",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "редко",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я люблю размышлять о том, как можно улучшить мир:",
+        "answers": [
+            {
+                "content": "да",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "трудно сказать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Ночью мне снятся фантастические или нелепые сны:",
+        "answers": [
+            {
+                "content": "да",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если я остаюсь дома один, то через некоторое время ощущаю тревогу и страх:",
+        "answers": [
+            {
+                "content": "да",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если мать Марии является сестрой отца Александра, то кем является Александр по отношению к отцу Марии?",
+        "answers": [
+            {
+                "content": "двоюродным братом",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "племянником",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "дядей",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    }
+]

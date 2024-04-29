@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(/static/font/Montserrat/static/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url(/static/font/Montserrat/static/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(/static/font/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a,a:focus,a:active{
+	outline: none;
+	user-select: none;
+}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    background: white;
+    font-family: var(--montserrat-regular), sans-serif;
+	height: 100vh;
+	width: 100%;
+    line-height: 100%;
+	font-size: 18px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    color: #000000;
+}
+*::selection {
+    background: var(--color-blue);
+    color: white;
+}
+input,button,textarea{font-family:inherit;color:inherit;background: transparent;outline: none;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+.wrapper{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main{
+    flex: 1 1 100%;
+}
+._container{
+    max-width: 1080px;
+    margin: 0px auto;
+    padding: 0px 10px;
+    box-sizing: content-box;
+}
+.items{
+    display: flex;
+}
+/*---------base-----------*/
+:root {
+    --color-blue: #48A7FF;
+    --color-orange: #FFA34E;
+    --color-gray: #E7E7E7;
+    --text-color-gray: #767676;
+    --montserrat-regular: "Montserrat-Regular";
+    --montserrat-medium: "Montserrat-Medium";
+    --montserrat-bold: "Montserrat-Bold";
+}

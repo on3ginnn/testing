@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Тестирование</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header__body _container">
+                <div class="header__content">
+                    <h1>
+                        МЕТОДИКИ И ВОПРОСЫ ДЛЯ ЭЛЕКТРОННОГО ПОМОЩНИКА
+                    </h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="tests">
+                <div class="tests__body _container">
+                    <div class="tests__content">
+                        <div class="tests__preview">
+                            Далее следует 3 опроса, каждый следующий станет доступным после прохождения предыдущего. После прохождения всех трех опросов, станет доступен результат.
+                        </div>
+                        <div class="tests__wrapper">
+                            <div class="tests__case test">
+                                <div class="test__wrapper">
+                                    <div class="test__header">
+                                        <div class="test__title">
+                                            <div class="test__title-num">
+                                                <!-- через js -->
+                                                Опрос №<span class="test_num"></span>
+                                            </div>
+                                            <div class="test__title-content test_title">
+                                                <!-- через js -->
+                                            </div>
+                                        </div>
+                                        <div class="test__tip test_tip">
+                                            <!-- через js -->
+                                        </div>
+                                        <div class="test__tip test_result">
+                                            Анализ результатов
+                                        </div>
+                                    </div>
+                                    <div class="test__body">
+                                        <div class="test__question test_question">
+                                        </div>
+                                        <div class="test__answers">
+                                            <ol class="test-answers answer__items items anwer_items" data-test-type="">
+                                                <!-- через js -->
+                                           </ol>
+                                        </div>
+                                        <div class="test__tools">
+                                            <div class="test__btn test_prev" id="test_prev">
+                                                < назад
+                                            </div>
+                                            <div class="test__counter">
+                                                <span class="test__counter-currnet test_current">
+                                                    <!-- через js -->
+                                                </span>
+                                                /
+                                                <span class="test__counter-total test_total">
+                                                    <!-- через js -->
+                                                </span>
+                                            </div>
+                                            <div class="test__btn test_next" id="test_next">
+                                                дальше >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="test__result">
+                                        <h2>Человек-техника</h2>
+                                        <div class="test__result-text">
+                                            Воспользуйся техническими средствами и инструментами для оптимизации процесса обучения, такими как компьютеры, интернет, программы для обучения и т. д.
+                                            <br>
+                                            Изучай технологические аспекты своего обучения и ищи новые методы и инструменты, которые могут помочь в улучшении результатов.
+                                        </div>
+                                        <div class="test__restart restart_btn">
+                                            пройти заного
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="/static/js/testItems.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

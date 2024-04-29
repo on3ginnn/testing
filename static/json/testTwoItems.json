@@ -1,0 +1,607 @@
+[
+    {
+        "question": "Обучение в школе и знания необходимы мне для...",
+        "answers": [
+            {
+                "content": "получения образования",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "поступления в вуз",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "будущей профессии",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "ориентировки в жизни",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "того, чтобы устроиться на работу",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я бы не учился, если бы...",
+        "answers": [
+            {
+                "content": "не было школы",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не жил в России",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не воля родителей",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не получал знания",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не жил",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мне нравится, когда меня хвалят за...",
+        "answers": [
+            {
+                "content": "хорошие отметки",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "успехи в учебе",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "приложенные усилия",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мои способности",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "выполнение домашнего задания",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мои личные качества",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мне кажется, что цель моей жизни...",
+        "answers": [
+            {
+                "content": "работать, жить и наслаждаться жизнью",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "закончить школу",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "доставлять пользу людям",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "обучение",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Моя цель на уроке...",
+        "answers": [
+            {
+                "content": "усвоить что-то новое",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "пообщаться с друзьями",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "слушать учителя",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "получить хорошую оценку",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "никому не мешать",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "При планировании своей работы я...",
+        "answers": [
+            {
+                "content": "тщательно обдумываю ее",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "сравниваю ее с имеющимся у меня опытом",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "сначала стараюсь понять ее суть",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "стараюсь сделать это так, чтобы работа была полностью",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "обращаюсь за помощью к старшим",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "сначала отдыхаю",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Самое интересное на уроке — это...",
+        "answers": [
+            {
+                "content": "общение с друзьями",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "общение с учителем",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "изучение новой темы",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "объяснения учителем нового материала",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "получать хорошие отметки",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "отвечать устно",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я изучаю материал добросовестно, если...",
+        "answers": [
+            {
+                "content": "он для меня интересен",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "у меня хорошее настроение",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "меня заставляют",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мне не дают списать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мне надо исправить плохую отметку",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "я его хорошо понимаю",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мне нравится делать уроки, когда...",
+        "answers": [
+            {
+                "content": "ничто меня не отвлекает",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "они несложные",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "остается много свободного времени, чтобы погулять",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "я хорошо понимаю тему",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нет возможности списать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "всегда, так как это необходимо для глубоких знаний",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Учиться лучше меня побуждает (побуждают)...",
+        "answers": [
+            {
+                "content": "деньги, которые я заработаю в будущем",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "родители и(или) учителя",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "чувство долга",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "низкие отметки",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "желание получать знания",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "общение",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я более активно работаю на занятиях, если...",
+        "answers": [
+            {
+                "content": "ожидаю одобрения окружающих",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мне интересна выполняемая работа",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мне нужна высокая отметка",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "хочу больше узнать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "хочу, чтобы на меня обратили внимание",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "изучаемый материал мне понадобится в дальнейшем",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "изучаемый материал мне понадобится в дальнейшем...",
+        "answers": [
+            {
+                "content": "моей упорной работы",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "заискивания перед учителем",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "подготовленности и внимания на уроках",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "моего везения",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "получения качественных знаний",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "помощи родителей или друзей",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мой успех при выполнении заданий на уроке зависит от...",
+        "answers": [
+            {
+                "content": "настроения",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "трудности заданий",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "моих способностей",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "приложенных усилий и старания",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "моего везения",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "внимания к объяснению учебного материала учителем",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Я буду активным на уроке, если...",
+        "answers": [
+            {
+                "content": "хорошо знаю тему и понимаю учебный материал",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "смогу справиться с предлагаемыми учителем заданиями",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "считаю нужным всегда так поступать",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "меня не будут ругать за ошибку",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "я уверен, что отвечу хорошо",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "иногда мне так хочется",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если учебный материал мне не понятен (труден для меня) я...",
+        "answers": [
+            {
+                "content": "ничего не предпринимаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "прибегаю к помощи товарищей",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "мирюсь с ситуацией",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "стараюсь разобраться во что бы то ни стало",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "надеюсь, что разберусь потом",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "вспоминаю объяснение учителя и просматриваю записи сделанные на уроке",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Ошибившись при выполнении задания, я...",
+        "answers": [
+            {
+                "content": "Ошибившись при выполнении задания, я...",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "теряюсь",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "прошу помощи у товарищей",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "нервничаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "продолжаю думать над ним",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "отказываюсь от его выполнения",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Если я не знаю, как выполнить учебное задание, то я...",
+        "answers": [
+            {
+                "content": "обращаюсь за помощью к товарищам",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "отказываюсь от его выполнения",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "думаю и рассуждаю",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "списываю у товарища",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "обращаюсь к учебнику",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "огорчаюсь",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    },
+    {
+        "question": "Мне не нравится выполнять учебные задания, если они...",
+        "answers": [
+            {
+                "content": "требуют большого умственного напряжения",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не требуют усилий",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "письменные",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "не требуют сообразительности",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "сложные и большие",
+                "weight": 0,
+                "active": false
+            },
+            {
+                "content": "однообразные и не требуют логического мышления",
+                "weight": 0,
+                "active": false
+            }
+        ]
+    }
+]
