@@ -18,6 +18,38 @@ const testTypes = {
     },
 }
 
+// вывод для заголовка рекомендации
+const keyToString = {
+    human: {
+        "1": "Человек-природа",
+        "2": "Человек-техника",
+        "3": "Человек-человек",
+        "4": "Человек-знаковая техника, знаковый образ",
+        "5": "Человек-художественный образ",
+    },
+    social: {
+        "B1": "Интеллект: конкретный",
+        "B2": "Абстрактное мышление",
+        "C1": "Эмоциональная неустойчивость",
+        "C2": "Эмоциональная стабильность",
+        "O1": "Спокойствие, уверенность в себе, жизнерадостность. Нервы не расшатаны",
+        "O2": "Тревожность, депрессивность, тяготится дурными предчувствиями",
+        "Q11": "Консерватизм, придерживается установившихся понятий, принимает их на веру",
+        "Q12": "Радикализм, тяга к новому, экспериментирующий, критически настроенный, аналитически мыслящий",
+        "Q31": "Недисциплинированность, плохой самоконтроль, подчинен собственным страстям",
+        "Q32": "Высокий контроль своих эмоций и поведения, точность в выполнении социальных требований",
+        "Q41": "Расслабленность, вялость, спокойствие, лень, низкое рабочее напряжение",
+        "Q42": "Высокая активность, напряженность, деятельный, взвинченный, высокое рабочее напряжение",
+    },
+    motivation: {
+        "1": "Очень высокий уровень мотивации",
+        "2": "Высокий уровень мотивации",
+        "3": "Средний уровень мотивации",
+        "4": "Сниженный уровень мотивации",
+        "5": "Низкий уровень мотивации",
+    },
+}
+
 // среднее значение для групп (3 тест)
 const avgPerGroups = {
     "B": 2,
@@ -171,11 +203,17 @@ function testRender(){
         const testTwoResult = testTwoResulting();
         const testThreeResult = testThreeResulting();
 
-        // tests[0].result = testOneResult;
-        // tests[1].result = testTwoResult;
+        const testsResultTitle = document.querySelector('.result__title');
+        const testsResultStr = `${keyToString.human[testOneResult] || ""} – ${testThreeResult.split("-").map(socialKey => keyToString.social[socialKey]).join(" – ")} – ${keyToString.motivation[testTwoResult] || ""}`
+        testsResultTitle.innerHTML = testsResultStr;
+        
+        let testsResultKey = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
+        console.log(testsResultKey);
+        testsResultKey = "1-B1-1";
 
-        const testsResult = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
-        console.log(testsResult);
+        console.log(testCases[testsResultKey]);
+        const testsResultText = document.querySelector('.result__text');
+        testsResultText.innerHTML = testCases[testsResultKey];
 
         // TODO: из tests[...].result получить результаты и вывести их в читаемом формате
 

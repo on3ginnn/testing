@@ -141,14 +141,18 @@ body._comleted .test__result{
     display: block;
 }
 h2{
-    font-size: 28px;
+    line-height: 100%;
+    font-size: 24px;
     color: var(--color-blue);
     font-family: var(--montserrat-bold);
+    font-family: "Roboto";
 }
-.test__result-text{
+.result__text{
     margin-top: 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--montserrat-medium);
+    font-family: "Roboto";
+    line-height: 120%;
 }
 .test__restart{
     cursor: pointer;
