@@ -17,6 +17,17 @@ const testTypes = {
         maxAnswerSelectedCount: 2,
     },
 }
+
+// среднее значение для групп (3 тест)
+const avgPerGroups = {
+    "B": 2,
+    "C": 5,
+    "O": 4,
+    "Q1": 5,
+    "Q3": 4,
+    "Q4": 4,
+}
+
 // все тесты
 const tests = [
     {
@@ -24,21 +35,24 @@ const tests = [
         tip: "Каждый вопрос имеет как бы две части, соединенные союзом «или». Выбери 1 вариант ответа.",
         testItems: JSON.parse(JSON.stringify(testOneItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "radio",
+        result: null,
     },
     {
         title: "МЕТОДИКА ИЗУЧЕНИЯ МОТИВАЦИИ УЧЕНИЯ ПОДРОСТКОВ М.И. ЛУКЬЯНОВОЙ И Н.В. КАЛИНИНОЙ",
         tip: "Выбери 2 варианта ответов, которые совпадают с твоим собственным мнением.",
         testItems: JSON.parse(JSON.stringify(testTwoItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "doubleCheckbox",
+        result: null,
     },
     {
         title: "ФИЗИОЛОГИЧЕСКИЕ ОСОБЕННОСТИ. СОКРАЩЕННЫЙ ВАРИАНТ ЛИЧНОСТНОГО ОПРОСНИКА Р. КЭТТЕЛЛА 13PF",
         tip: "Внимательно прочитай каждое неоконченное предложение и предлагаемый вариант ответа к нему.",
         testItems: JSON.parse(JSON.stringify(testThreeItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "radio",
+        result: null,
     },
 ];
-
+let testsResult;
 // функция для рестарта(обнуление)
 function testRestart(){
     activeTest = 0;
@@ -46,9 +60,104 @@ function testRestart(){
 
     document.body.classList.remove('_comleted');
 
+    tests.forEach(item => item.result=null);
+
     tests[0].testItems = JSON.parse(JSON.stringify(testOneItems));
     tests[1].testItems = JSON.parse(JSON.stringify(testTwoItems));
     tests[2].testItems = JSON.parse(JSON.stringify(testThreeItems));
+    console.log(tests);
+}
+
+// результаты первого теста
+function testOneResulting(){
+    // узнать какой тип встречается чаще
+    const max = (array) => {
+        let maxCount = 0;
+        let maxValue = 0;
+        
+        array.forEach((x) => {
+            const count = array.filter((value) => value === x).length;
+            if (count > maxCount) {
+                maxCount = count;
+                maxValue = x;
+            }
+        });
+        console.log(maxValue);
+        return maxValue;
+    };
+    let testOneResults = tests[0].testItems.map(answerArray => answerArray.answers.filter(answer => answer.active).map(answer => answer.weight)[0] || 0);
+    console.log(testOneResults);
+    return max(testOneResults) + 1;
+}
+
+// результаты второго теста
+function testTwoResulting(){
+    // узнать сумму списка
+    const sum = (array) => {
+        let sumValue = 0;
+        
+        array.forEach((x) => {
+            sumValue += x;
+        });
+        return sumValue;
+    };
+    let testTwoResults = tests[1].testItems.map(answerArray => sum(answerArray.answers.filter(answer => answer.active).map(answer => answer.weight)));
+
+    let sumResult = sum(testTwoResults);
+    let resKey;
+    
+    if (70 <= sumResult <= 80){
+        resKey = 1;
+    } else if (57 <= sumResult <= 69){
+        resKey = 2;
+    } else if (44 <= sumResult <= 56){
+        resKey = 3;
+    } else if (29 <= sumResult <= 43){
+        resKey = 4;
+    } else {
+        resKey = 5;
+    }
+
+    return resKey;
+}
+
+// результаты третьего теста
+function testThreeResulting(){
+    // узнать сумму списка
+    const sum = (array) => {
+        console.log(array)
+        let sumValue = 0;
+        
+        array.forEach((x) => {
+            sumValue += x;
+        });
+        return sumValue;
+    };
+
+    const groupsArray = ["B", "C", "O", "Q1", "Q3", "Q4"];
+    let resultGroups = [];
+
+    groupsArray.forEach(group => {
+        let scoreByGroup = sum(tests[2].testItems.filter(item => item.group === group).map(answerArray => answerArray.answers.filter(answer => answer.active).map(answer => answer.weight)[0] || 0));
+        console.log(scoreByGroup);
+        console.log(avgPerGroups[group]);
+        if (scoreByGroup < avgPerGroups[group]){
+            resultGroups.push(`${group}1`);
+        } else if (scoreByGroup > avgPerGroups[group]){
+            resultGroups.push(`${group}2`);
+        }
+    });
+
+    console.log(resultGroups);
+
+    // let scoreGroupB = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "B").answers.filter(answer => answer.active).map(answer => answer.weight)));
+    // let scoreGroupC = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "C").answers.filter(answer => answer.active).map(answer => answer.weight)));
+    // let scoreGroupO = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "O").answers.filter(answer => answer.active).map(answer => answer.weight)));
+    // let scoreGroupQ1 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q1").answers.filter(answer => answer.active).map(answer => answer.weight)));
+    // let scoreGroupQ3 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q3").answers.filter(answer => answer.active).map(answer => answer.weight)));
+    // let scoreGroupQ4 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q4").answers.filter(answer => answer.active).map(answer => answer.weight)));
+
+    return resultGroups.join("-");
 }
 
 // рендеринг тестов(при загрузке и клике на кнопки)
@@ -56,6 +165,20 @@ function testRender(){
     // когда activeTest больше чем всего тестов, тест пройден
     if (activeTest >= tests.length) {
         document.body.classList.add('_comleted');
+        // подсчет результатов тестов
+
+        const testOneResult = testOneResulting();
+        const testTwoResult = testTwoResulting();
+        const testThreeResult = testThreeResulting();
+
+        // tests[0].result = testOneResult;
+        // tests[1].result = testTwoResult;
+
+        const testsResult = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
+        console.log(testsResult);
+
+        // TODO: из tests[...].result получить результаты и вывести их в читаемом формате
+
     } else {
         const testNum = document.querySelector('.test_num');
         const testTitle = document.querySelector('.test_title');
@@ -109,18 +232,21 @@ function testRender(){
 
 // события клика
 function clickEvent(event){
-    // TODO: нужна ли валидации на выбранный ответ(обязательно ли выбрать)
     // кноки переключения элементов теста
     if (event.target.closest('.test__btn')){
         const clickBtn = event.target.closest('.test__btn');
         
         if (clickBtn.id === "test_next"){
-            // если это не последний элемент теста
-            if (activeTestItem + 1 < tests[activeTest].testItems.length){
-                activeTestItem++;
-            } else {  // если последний, то переключаем на следующий тест
-                activeTest++;
-                activeTestItem = 0;
+            // проверка на обязательный выбор ответа, во 2 - 2 ответа обязательно
+            let activeAnswerCount = tests[activeTest].testItems[activeTestItem].answers.filter(item => item.active).length;
+            if (activeAnswerCount == testTypes[tests[activeTest].testType].maxAnswerSelectedCount) {
+                // если это не последний элемент теста
+                if (activeTestItem + 1 < tests[activeTest].testItems.length){
+                    activeTestItem++;
+                } else {  // если последний, то переключаем на следующий тест
+                    activeTest++;
+                    activeTestItem = 0;
+                }
             }
         } else if (clickBtn.id === "test_prev"){
             // если не последний элемент теста
@@ -151,8 +277,25 @@ function clickEvent(event){
                 tests[activeTest].testItems[activeTestItem].answers[answerItem.dataset.index].active = true;
             }
         }
-    }
 
+    }
+    // чит кнопка на конец тестов
+    // TODO: убрать
+    if (event.target.closest('.cheat_btn')){
+        activeTest = 3;
+    }
+    if (event.target.closest('.cheat_btn#test1')){
+        activeTest = 0;
+        activeTestItem = 0;
+    }
+    if (event.target.closest('.cheat_btn#test2')){
+        activeTest = 1;
+        activeTestItem = 0;
+    }
+    if (event.target.closest('.cheat_btn#test3')){
+        activeTest = 2;
+        activeTestItem = 0;
+    }
     // рендеринг изменений
     testRender();
 }

@@ -1,4 +1,11 @@
 // элементы первого теста
+/*  Индексы отличны от ключей, для заполнения кейсов, использовать нумерацию с 1 (1...5)
+человек - природа = 0
+человек - техника = 1
+человек - человек = 2
+человек - знаковая техника, знаковый образ = 3
+человек - художественный образ = 4
+*/
 const testOneItems = [
     {
         "question": null,
@@ -10,7 +17,7 @@ const testOneItems = [
             },
             {
                 "content": "Обслуживать машины, приборы (следить, регулировать)",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             }
         ]
@@ -20,12 +27,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Помогать больным людям, лечить их",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "Составлять таблицы, схемы, программы для вычислительных машин",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -35,7 +42,7 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Следить за качеством книжных иллюстраций, плакатов, художественных открыток, грампластинок",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
@@ -50,12 +57,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Обрабатывать материалы (дерево, ткань, пластмассу, металл и т.п.).",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "Доводить товары до потребителя (рекламировать, продавать)",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
@@ -65,12 +72,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Обсуждать научно-популярные книги, статьи",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "Обсуждать художественные книги (или пьесы, концерты)",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             }
         ]
@@ -80,12 +87,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Сообщать, разъяснять людям нужные им сведения (в справочном бюро, на экскурсии и т.д.)",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "Художественно оформлять выставки, витрины (или участвовать в подготовке мероприятий, концертов)",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             }
         ]
@@ -95,12 +102,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Ремонтировать вещи, изделия (одежду, технику), жилище",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "Искать и исправлять ошибки в текстах, таблицах, рисунках",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -115,7 +122,7 @@ const testOneItems = [
             },
             {
                 "content": "Выполнять вычисления, расчеты",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -130,7 +137,7 @@ const testOneItems = [
             },
             {
                 "content": "Конструировать, проектировать новые виды промышленных изделий (машины или одежду, дома, продукты питания и т.п.)",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             }
         ]
@@ -140,12 +147,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Разбирать споры, ссоры между людьми, убеждать, разъяснять поощрять, наказывать",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "Разбираться в чертежах, схемах, таблицах (проверять, уточнять, приводить в порядок)",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -155,7 +162,7 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Наблюдать, изучать работу кружков художественной самодеятельности",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
@@ -170,12 +177,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Обслуживать, налаживать медицинские приборы, аппараты",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "Оказывать людям медицинскую помощь при ранениях, ушибах, ожогах и т.п.",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
@@ -185,12 +192,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Красить или расписывать стены помещений, поверхность изделий",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
                 "content": "Осуществлять монтаж зданий или сборку машин, приборов",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             }
         ]
@@ -200,12 +207,12 @@ const testOneItems = [
         "answers": [
             {
                 "content": "Организовывать культпоходы сверстников или младших в театры, музеи, экскурсии, туристические походы и т.п",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "Играть на сцене, принимать участие в концертах",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             }
         ]
@@ -220,7 +227,7 @@ const testOneItems = [
             },
             {
                 "content": "Работать на клавишных машинах",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -233,27 +240,27 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "получения образования",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "поступления в вуз",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
                 "content": "будущей профессии",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
                 "content": "ориентировки в жизни",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "того, чтобы устроиться на работу",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             }
         ]
@@ -268,7 +275,7 @@ const testTwoItems = [
             },
             {
                 "content": "не жил в России",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
@@ -278,12 +285,12 @@ const testTwoItems = [
             },
             {
                 "content": "не получал знания",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "не жил",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             }
         ]
@@ -293,32 +300,32 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "хорошие отметки",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "успехи в учебе",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "приложенные усилия",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "мои способности",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "выполнение домашнего задания",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "мои личные качества",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -328,7 +335,7 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "работать, жить и наслаждаться жизнью",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
@@ -338,12 +345,12 @@ const testTwoItems = [
             },
             {
                 "content": "доставлять пользу людям",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
                 "content": "обучение",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             }
         ]
@@ -353,22 +360,22 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "усвоить что-то новое",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "пообщаться с друзьями",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "слушать учителя",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "получить хорошую оценку",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
@@ -383,22 +390,22 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "тщательно обдумываю ее",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "сравниваю ее с имеющимся у меня опытом",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "сначала стараюсь понять ее суть",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "стараюсь сделать это так, чтобы работа была полностью",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
@@ -408,7 +415,7 @@ const testTwoItems = [
             },
             {
                 "content": "сначала отдыхаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             }
         ]
@@ -418,32 +425,32 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "общение с друзьями",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "общение с учителем",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "изучение новой темы",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             },
             {
                 "content": "объяснения учителем нового материала",
-                "weight": 0,
+                "weight": 4,
                 "active": false
             },
             {
                 "content": "получать хорошие отметки",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "отвечать устно",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             }
         ]
@@ -453,12 +460,12 @@ const testTwoItems = [
         "answers": [
             {
                 "content": "он для меня интересен",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "у меня хорошее настроение",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -473,12 +480,12 @@ const testTwoItems = [
             },
             {
                 "content": "мне надо исправить плохую отметку",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "я его хорошо понимаю",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             }
         ]
@@ -493,17 +500,17 @@ const testTwoItems = [
             },
             {
                 "content": "они несложные",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
                 "content": "остается много свободного времени, чтобы погулять",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "я хорошо понимаю тему",
-                "weight": 0,
+                "weight": 3,
                 "active": false
             },
             {
@@ -513,7 +520,7 @@ const testTwoItems = [
             },
             {
                 "content": "всегда, так как это необходимо для глубоких знаний",
-                "weight": 0,
+                "weight": 5,
                 "active": false
             }
         ]
@@ -838,6 +845,7 @@ const testTwoItems = [
 const testThreeItems = [
     {
         "question": "Если бы я сказал, что небо находится внизу, а зимой жарко, я должен был бы назвать преступника:",
+        "group": "B",
         "answers": [
             {
                 "content": "бандитом",
@@ -846,7 +854,7 @@ const testThreeItems = [
             },
             {
                 "content": "святым",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -858,15 +866,16 @@ const testThreeItems = [
     },
     {
         "question": "Когда я ложусь спать, я:",
+        "group": "C",
         "answers": [
             {
                 "content": "засыпаю быстро",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "нечто среднее",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -878,6 +887,7 @@ const testThreeItems = [
     },
     {
         "question": "Если мне кто-нибудь нагрубит, я могу быстро забыть об этом:",
+        "group": "O",
         "answers": [
             {
                 "content": "верно",
@@ -886,27 +896,28 @@ const testThreeItems = [
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "неверно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "Мне больше нравятся новые способы выполнения какой-либо работы, чем придерживаться испытанных приемов:",
+        "group": "Q1",
         "answers": [
             {
                 "content": "верно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -918,15 +929,16 @@ const testThreeItems = [
     },
     {
         "question": "Я думаю, что я менее чувствительный и менее возбудимый, чем большинство людей:",
+        "group": "Q3",
         "answers": [
             {
                 "content": "верно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "затрудняюсь сказать",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -938,15 +950,16 @@ const testThreeItems = [
     },
     {
         "question": "Меня раздражают люди, которые не могут быстро принимать решения:",
+        "group": "Q4",
         "answers": [
             {
                 "content": "верно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -958,6 +971,7 @@ const testThreeItems = [
     },
     {
         "question": "Я думаю, что слово, противоположное по смыслу слову «неточный», - это:",
+        "group": "B",
         "answers": [
             {
                 "content": "небрежный",
@@ -971,22 +985,23 @@ const testThreeItems = [
             },
             {
                 "content": "приблизительный",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             }
         ]
     },
     {
         "question": "У меня всегда хватает энергии, когда это мне необходимо:",
+        "group": "C",
         "answers": [
             {
                 "content": "да",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "трудно сказать",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -998,15 +1013,16 @@ const testThreeItems = [
     },
     {
         "question": "Меня волнуют мои прошлые поступки и ошибки:",
+        "group": "O",
         "answers": [
             {
                 "content": "да",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1018,6 +1034,7 @@ const testThreeItems = [
     },
     {
         "question": "Какое слово не связано с другими словами:",
+        "group": "B",
         "answers": [
             {
                 "content": "кошка",
@@ -1026,7 +1043,7 @@ const testThreeItems = [
             },
             {
                 "content": "близко",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1038,6 +1055,7 @@ const testThreeItems = [
     },
     {
         "question": "Я никогда не чувствую себя таким несчастным, что хочется плакать:",
+        "group": "O",
         "answers": [
             {
                 "content": "верно",
@@ -1046,27 +1064,28 @@ const testThreeItems = [
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "неверно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "Усилия, затраченные на составление планов:",
+        "group": "Q3",
         "answers": [
             {
                 "content": "никогда не лишние",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "никогда не лишние",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1078,6 +1097,7 @@ const testThreeItems = [
     },
     {
         "question": "Необдуманные поступки и высказывания моих приятелей в мой адрес не обижают и не огорчают меня:",
+        "group": "Q4",
         "answers": [
             {
                 "content": "верно",
@@ -1086,27 +1106,28 @@ const testThreeItems = [
             },
             {
                 "content": "верно",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "неверно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "То, что я делаю, у меня не получается:",
+        "group": "C",
         "answers": [
             {
                 "content": "редко",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "иногда",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1118,15 +1139,16 @@ const testThreeItems = [
     },
     {
         "question": "Если человек не отвечает сразу же после того, как я что-нибудь сказал ему, то я чувствую, что, должно быть, сказал какую-нибудь глупость:",
+        "group": "O",
         "answers": [
             {
                 "content": "верно",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1138,6 +1160,7 @@ const testThreeItems = [
     },
     {
         "question": "В школьные годы я больше всего получаю знаний:",
+        "group": "Q1",
         "answers": [
             {
                 "content": "на уроках",
@@ -1146,27 +1169,28 @@ const testThreeItems = [
             },
             {
                 "content": "трудно сказать",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "читая книги, из информации в Интернете и др.",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "У меня возникают сильные эмоции: тревога, гнев, приступы смеха и т. п., казалось бы, без всякой причины:",
+        "group": "Q4",
         "answers": [
             {
                 "content": "да",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "иногда",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1178,6 +1202,7 @@ const testThreeItems = [
     },
     {
         "question": "Все несчастья происходят из-за людей:",
+        "group": "Q1",
         "answers": [
             {
                 "content": "которые стараются во все внести изменения, хотя уже существуют удовлетворительные способы решения этих вопросов",
@@ -1186,18 +1211,19 @@ const testThreeItems = [
             },
             {
                 "content": "не знаю",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "которые отвергают новые, многообещающие предложения",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "Аккуратные, требовательные люди не уживаются со мной:",
+        "group": "Q3",
         "answers": [
             {
                 "content": "верно",
@@ -1206,18 +1232,19 @@ const testThreeItems = [
             },
             {
                 "content": "иногда",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "нет",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "Если стрелки часов встречаются ровно через каждые 65 минут, отмеренные по точным часам, то эти часы:",
+        "group": "B",
         "answers": [
             {
                 "content": "отстают",
@@ -1231,13 +1258,14 @@ const testThreeItems = [
             },
             {
                 "content": "спешат",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             }
         ]
     },
     {
         "question": "Мне бывает скучно:",
+        "group": "C",
         "answers": [
             {
                 "content": "часто",
@@ -1246,27 +1274,28 @@ const testThreeItems = [
             },
             {
                 "content": "иногда",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "редко",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "Я люблю размышлять о том, как можно улучшить мир:",
+        "group": "Q1",
         "answers": [
             {
                 "content": "да",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "трудно сказать",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1278,6 +1307,7 @@ const testThreeItems = [
     },
     {
         "question": "Ночью мне снятся фантастические или нелепые сны:",
+        "group": "Q3",
         "answers": [
             {
                 "content": "да",
@@ -1286,27 +1316,28 @@ const testThreeItems = [
             },
             {
                 "content": "иногда",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
                 "content": "нет",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             }
         ]
     },
     {
         "question": "Если я остаюсь дома один, то через некоторое время ощущаю тревогу и страх:",
+        "group": "Q4",
         "answers": [
             {
                 "content": "да",
-                "weight": 0,
+                "weight": 2,
                 "active": false
             },
             {
                 "content": "иногда",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
@@ -1318,6 +1349,7 @@ const testThreeItems = [
     },
     {
         "question": "Если мать Марии является сестрой отца Александра, то кем является Александр по отношению к отцу Марии?",
+        "group": "B",
         "answers": [
             {
                 "content": "двоюродным братом",
@@ -1326,7 +1358,7 @@ const testThreeItems = [
             },
             {
                 "content": "племянником",
-                "weight": 0,
+                "weight": 1,
                 "active": false
             },
             {
