@@ -209,7 +209,7 @@ function testRender(){
         
         let testsResultKey = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
         console.log(testsResultKey);
-        testsResultKey = "1-B1-1";
+        // testsResultKey = "1-B1-1";
 
         console.log(testCases[testsResultKey]);
         const testsResultText = document.querySelector('.result__text');
