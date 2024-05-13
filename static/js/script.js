@@ -189,7 +189,7 @@ function testThreeResulting(){
     // let scoreGroupQ3 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q3").answers.filter(answer => answer.active).map(answer => answer.weight)));
     // let scoreGroupQ4 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q4").answers.filter(answer => answer.active).map(answer => answer.weight)));
 
-    return resultGroups.join("-");
+    return resultGroups;
 }
 
 // рендеринг тестов(при загрузке и клике на кнопки)
@@ -204,19 +204,23 @@ function testRender(){
         const testThreeResult = testThreeResulting();
 
         const testsResultTitle = document.querySelector('.result__title');
-        const testsResultStr = `${keyToString.human[testOneResult] || ""} – ${testThreeResult.split("-").map(socialKey => keyToString.social[socialKey]).join(" – ")} – ${keyToString.motivation[testTwoResult] || ""}`
+        const testsResultStr = `${keyToString.human[testOneResult] || ""} – ${testThreeResult.map(socialKey => keyToString.social[socialKey]).join(" – ")} – ${keyToString.motivation[testTwoResult] || ""}`
         testsResultTitle.innerHTML = testsResultStr;
         
-        let testsResultKey = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
-        console.log(testsResultKey);
+        // let testsResultKey = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
+        // console.log(testsResultKey);
         // testsResultKey = "1-B1-1";
 
-        console.log(testCases[testsResultKey]);
+        resultRecomendation = [];
+
+        resultRecomendation.push(humanCases[testOneResult]);
+        testThreeResult.forEach(socialGroup => {
+            resultRecomendation.push(socialCases[socialGroup]);
+        });
+        resultRecomendation.push(motivationCases[testTwoResult]);
+
         const testsResultText = document.querySelector('.result__text');
-        testsResultText.innerHTML = testCases[testsResultKey];
-
-        // TODO: из tests[...].result получить результаты и вывести их в читаемом формате
-
+        testsResultText.innerHTML = resultRecomendation.join("\n");
     } else {
         const testNum = document.querySelector('.test_num');
         const testTitle = document.querySelector('.test_title');

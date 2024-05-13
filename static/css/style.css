@@ -86,6 +86,7 @@ h1{
 }
 .answer._active{
     border: 1px solid var(--color-blue);
+    background: rgba(72, 167, 255, .1);
 }
 .answer._disable{
     opacity: .8;
