@@ -74,6 +74,17 @@ h1{
     justify-content: space-between;
     counter-reset: items lower-alpha;
 }
+.result__diagram{
+    position: relative;
+}
+.result__diagram img{
+    display: none;
+    width: 100%;
+    object-fit: cover;
+}
+.result__diagram img._active{
+    display: block;
+}
 .answer{
 
     user-select: none;

@@ -7,6 +7,7 @@ let activeTestItem = 0;
 console.log(testOneItems);
 console.log(testTwoItems);
 console.log(testThreeItems);
+console.log(testFourItems);
 
 // виды тестов
 const testTypes = {
@@ -83,6 +84,13 @@ const tests = [
         testType: "radio",
         result: null,
     },
+    {
+        title: "УРОВЕНЬ ЗНАНИЙ И УМЕНИЙ, СТИЛЬ ОБУЧЕНИЯ, ПРОДУКТИВНОЕ ВРЕМЯ",
+        tip: "Внимательно прочитай каждое предложение и выбери предлагаемый вариант ответа к нему.",
+        testItems: JSON.parse(JSON.stringify(testFourItems)),  // копия из реальных данных, т.к требуется обнулять
+        testType: "radio",
+        result: null,
+    },
 ];
 let testsResult;
 // функция для рестарта(обнуление)
@@ -97,6 +105,7 @@ function testRestart(){
     tests[0].testItems = JSON.parse(JSON.stringify(testOneItems));
     tests[1].testItems = JSON.parse(JSON.stringify(testTwoItems));
     tests[2].testItems = JSON.parse(JSON.stringify(testThreeItems));
+    tests[3].testItems = JSON.parse(JSON.stringify(testFourItems));
     console.log(tests);
 }
 
@@ -181,15 +190,30 @@ function testThreeResulting(){
     });
 
     console.log(resultGroups);
-
-    // let scoreGroupB = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "B").answers.filter(answer => answer.active).map(answer => answer.weight)));
-    // let scoreGroupC = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "C").answers.filter(answer => answer.active).map(answer => answer.weight)));
-    // let scoreGroupO = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "O").answers.filter(answer => answer.active).map(answer => answer.weight)));
-    // let scoreGroupQ1 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q1").answers.filter(answer => answer.active).map(answer => answer.weight)));
-    // let scoreGroupQ3 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q3").answers.filter(answer => answer.active).map(answer => answer.weight)));
-    // let scoreGroupQ4 = tests[2].testItems.map(answerArray => sum(answerArray.filter(item => item.group === "Q4").answers.filter(answer => answer.active).map(answer => answer.weight)));
-
+    
     return resultGroups;
+}
+
+// результаты четвертого теста
+function testFourResulting(){
+    // узнать какой тип встречается чаще
+    const max = (array) => {
+        let maxCount = 0;
+        let maxValue = 0;
+        
+        array.forEach((x) => {
+            const count = array.filter((value) => value === x).length;
+            if (count > maxCount) {
+                maxCount = count;
+                maxValue = x;
+            }
+        });
+        return maxValue;
+    };
+    let results = tests[3].testItems.map(answerArray => answerArray.answers.filter(answer => answer.active).map(answer => answer.weight)[0] || 1);
+    
+    console.log(results);
+    return max(results);
 }
 
 // рендеринг тестов(при загрузке и клике на кнопки)
@@ -202,14 +226,11 @@ function testRender(){
         const testOneResult = testOneResulting();
         const testTwoResult = testTwoResulting();
         const testThreeResult = testThreeResulting();
+        const testFourResult = testFourResulting();
 
         const testsResultTitle = document.querySelector('.result__title');
         const testsResultStr = `${keyToString.human[testOneResult] || ""} – ${testThreeResult.map(socialKey => keyToString.social[socialKey]).join(" – ")} – ${keyToString.motivation[testTwoResult] || ""}`
         testsResultTitle.innerHTML = testsResultStr;
-        
-        // let testsResultKey = `${testOneResult}-${testThreeResult}-${testTwoResult}`;  // ключ для получения рекомендации
-        // console.log(testsResultKey);
-        // testsResultKey = "1-B1-1";
 
         resultRecomendation = [];
 
@@ -220,7 +241,12 @@ function testRender(){
         resultRecomendation.push(motivationCases[testTwoResult]);
 
         const testsResultText = document.querySelector('.result__text');
-        testsResultText.innerHTML = resultRecomendation.join("\n");
+        testsResultText.innerHTML = resultRecomendation.join("<br>");
+
+        const testsResultDiagrams = document.querySelectorAll(`.result__diagram img`);
+        testsResultDiagrams.forEach(diagram => diagram.classList.remove("_active"));
+        const testsResultDiagram = document.querySelector(`.result__diagram img#diagram${testFourResult}`);
+        testsResultDiagram.classList.add('_active');
     } else {
         const testNum = document.querySelector('.test_num');
         const testTitle = document.querySelector('.test_title');
@@ -324,7 +350,7 @@ function clickEvent(event){
     // чит кнопка на конец тестов
     // TODO: убрать
     if (event.target.closest('.cheat_btn')){
-        activeTest = 3;
+        activeTest = tests.length;
     }
     if (event.target.closest('.cheat_btn#test1')){
         activeTest = 0;
@@ -336,6 +362,10 @@ function clickEvent(event){
     }
     if (event.target.closest('.cheat_btn#test3')){
         activeTest = 2;
+        activeTestItem = 0;
+    }
+    if (event.target.closest('.cheat_btn#test4')){
+        activeTest = 3;
         activeTestItem = 0;
     }
     // рендеринг изменений

@@ -1084,7 +1084,7 @@ const testThreeItems = [
                 "active": false
             },
             {
-                "content": "никогда не лишние",
+                "content": "трудно сказать",
                 "weight": 1,
                 "active": false
             },
@@ -1105,7 +1105,7 @@ const testThreeItems = [
                 "active": false
             },
             {
-                "content": "верно",
+                "content": "не знаю",
                 "weight": 1,
                 "active": false
             },
@@ -1368,4 +1368,108 @@ const testThreeItems = [
             }
         ]
     }
+]
+
+// элементы третьего теста
+const testFourItems = [
+    {
+        "question": "В какое время суток ты уделяешь время на учебу вне уроков?",
+        "answers": [
+            {
+                "content": "День",
+                "weight": 1,
+                "active": false,
+            },
+            {
+                "content": "Вечер",
+                "weight": 2,
+                "active": false,
+            },
+            {
+                "content": "Ночь",
+                "weight": 3,
+                "active": false,
+            }
+        ]
+    },
+    {
+        "question": 'Проснувшись утром ты…?',
+        "answers": [
+            {
+                "content": 'Готов и настроен получать новые знания в школе',
+                "weight": 1,
+                "active": false,
+            },
+            {
+                "content": 'Чувствуешь себя уставшим и хочешь спать',
+                "weight": 2,
+                "active": false,
+            },
+            {
+                "content": 'Полон идей и хочешь заняться любимым делом',
+                "weight": 3,
+                "active": false,
+            },
+        ]
+    },
+    {
+        "question": 'В какое время суток вы обычно чувствуете себя наиболее продуктивно?',
+        "answers": [
+            {
+                "content": 'Утро',
+                "weight": 1,
+                "active": false,
+            },
+            {
+                "content": 'День',
+                "weight": 2,
+                "active": false,
+            },
+            {
+                "content": 'Вечер',
+                "weight": 3,
+                "active": false,
+            },
+        ]
+    },
+    {
+        "question": 'После школы обычно ты…?',
+        "answers": [
+            {
+                "content": 'Сразу делаю домашнее задание',
+                "weight": 1,
+                "active": false,
+            },
+            {
+                "content": 'Пойду отдыхать после изнуряющих уроков',
+                "weight": 3,
+                "active": false,
+            },
+            {
+                "content": 'Пойду на дополнительные занятия по своему вкусу или уделю время хобби',
+                "weight": 2,
+                "active": false,
+            },
+        ]
+    },
+    {
+        "question": 'В какое время ты ложишься спать?',
+        "answers": [
+            {
+                "content": 'до 22.00',
+                "weight": 1,
+                "active": false,
+            },
+            {
+                "content": '23.00-00.00',
+                "weight": 2,
+                "active": false,
+            },
+            {
+                "content": 'после полуночи',
+                "weight": 3,
+                "active": false,
+            },
+        ]
+    },
 ]
