@@ -12,9 +12,12 @@
         <header>
             <div class="header__body _container">
                 <div class="header__content">
-                    <h1>
-                        МЕТОДИКИ И ВОПРОСЫ ДЛЯ ЭЛЕКТРОННОГО ПОМОЩНИКА
-                    </h1>
+                    <a href="/" class="logo">
+                        <div class="logo__img">
+                            <img src="./static/img/logo.png" alt="">
+                        </div>
+                        StudyMate
+                    </a>
                 </div>
             </div>
         </header>
@@ -23,27 +26,32 @@
                 <div class="tests__body _container">
                     <div class="tests__content">
                         <div class="tests__preview">
-                            Далее следует 3 опроса, каждый следующий станет доступным после прохождения предыдущего. После прохождения всех трех опросов, станет доступен результат.
+                            <h1 class="title__sub">
+                                Цифровой помощник для персонализации обучения
+                            </h1>
                         </div>
                         <div class="tests__wrapper">
                             <div class="tests__case test">
                                 <div class="test__wrapper">
                                     <div class="test__header">
                                         <div class="test__title">
-                                            <div class="test__title-num">
-                                                <!-- через js -->
-                                                Опрос №<span class="test_num"></span>
-                                            </div>
                                             <div class="test__title-content test_title">
                                                 <!-- через js -->
+                                            </div>
+                                            <div class="test__title-num">
+                                                <!-- через js -->
+                                                <div class="test__decor">
+                                                    <div class="tests__counter">
+                                                        <span class="test_num">25</span>%
+                                                    </div>
+                                                    <img src="./static/img/circle.png" alt="">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="test__tip test_tip">
                                             <!-- через js -->
                                         </div>
-                                        <div class="test__tip test_result">
-                                            Анализ результатов
-                                        </div>
+
                                     </div>
                                     <div class="test__body">
                                         <div class="test__question test_question">
@@ -72,7 +80,34 @@
                                         </div>
                                     </div>
                                     <div class="result test__result">
+                                        <div class="result__presub">
+                                            Вами были определлены следующие характеристики:
+                                        </div>
                                         <h2 class="result__title">
+                                            <div class="result__block result__human">
+                                                <h3 class="result__subtitle">
+                                                    Способности и предпочтения:
+                                                </h3>
+                                                <ul class="result__items result__human-items">
+
+                                                </ul>
+                                            </div>
+                                            <div class="result__block result__social">
+                                                <h3 class="result__subtitle">
+                                                    Физиологические особенности:
+                                                </h3>
+                                                <ul class="result__items result__social-items">
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="result__block result__motivation">
+                                                <h3 class="result__subtitle">
+                                                    Уровень мотивации обучения:
+                                                </h3>
+                                                <ul class="result__items result__motivation-items">
+                                                    
+                                                </ul>
+                                            </div>
                                             <!-- через js -->
                                         </h2>
                                         <div class="result__diagram">
@@ -85,7 +120,7 @@
 
                                         </div>
                                         <div class="test__restart restart_btn">
-                                            пройти заного
+                                            пройти заново
                                         </div>
                                     </div>
                                 </div>

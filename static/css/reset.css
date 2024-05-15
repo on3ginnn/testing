@@ -1,14 +1,14 @@
 @font-face {
-    font-family: "Montserrat-Regular";
-    src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
+    font-family: "Roboto-Regular";
+    src: url(../font/Roboto/Roboto-Regular.ttf);
 }
 @font-face {
-    font-family: "Montserrat-Medium";
-    src: url(../font/Montserrat/static/Montserrat-Medium.ttf);
+    font-family: "Roboto-Medium";
+    src: url(../font/Roboto/Roboto-Medium.ttf);
 }
 @font-face {
-    font-family: "Montserrat-Bold";
-    src: url(../font/Montserrat/static/Montserrat-Bold.ttf);
+    font-family: "Roboto-Bold";
+    src: url(../font/Roboto/Roboto-Bold.ttf);
 }
 
 *{
@@ -32,7 +32,7 @@ nav,footer,header,aside{display: block;}
 
 html,body{
     background: white;
-    font-family: var(--montserrat-regular), sans-serif;
+    font-family: var(--font-regular), sans-serif;
 	height: 100vh;
 	width: 100%;
     line-height: 100%;
@@ -90,11 +90,11 @@ main{
 }
 /*---------base-----------*/
 :root {
-    --color-blue: #48A7FF;
+    --color-blue: #0731b9;
     --color-orange: #FFA34E;
     --color-gray: #E7E7E7;
     --text-color-gray: #767676;
-    --montserrat-regular: "Montserrat-Regular";
-    --montserrat-medium: "Montserrat-Medium";
-    --montserrat-bold: "Montserrat-Bold";
+    --font-regular: "Roboto-Regular";
+    --font-medium: "Roboto-Medium";
+    --font-bold: "Roboto-Bold";
 }

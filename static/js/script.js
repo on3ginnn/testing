@@ -64,34 +64,35 @@ const avgPerGroups = {
 // все тесты
 const tests = [
     {
-        title: "СПОСОБНОСТИ И ПРЕДПОЧТЕНИЯ (СКЛОННОСТИ К ОПРЕДЕЛЕННЫМ ТИПАМ ПРОФЕССИЙ ПО КЛИМОВУ)",
+        title: "УЧИТЫВАЕМ ВАШИ СПОСОБНОСТИ И ПРЕДПОЧТЕНИЯ",
         tip: "Каждый вопрос имеет как бы две части, соединенные союзом «или». Выбери 1 вариант ответа.",
         testItems: JSON.parse(JSON.stringify(testOneItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "radio",
         result: null,
     },
     {
-        title: "МЕТОДИКА ИЗУЧЕНИЯ МОТИВАЦИИ УЧЕНИЯ ПОДРОСТКОВ М.И. ЛУКЬЯНОВОЙ И Н.В. КАЛИНИНОЙ",
+        title: "ОПРЕДЕЛЯЕМ ВАШ УРОВЕНЬ МОТИВАЦИИ К ОБУЧЕНИЮ",
         tip: "Выбери 2 варианта ответов, которые совпадают с твоим собственным мнением.",
         testItems: JSON.parse(JSON.stringify(testTwoItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "doubleCheckbox",
         result: null,
     },
     {
-        title: "ФИЗИОЛОГИЧЕСКИЕ ОСОБЕННОСТИ. СОКРАЩЕННЫЙ ВАРИАНТ ЛИЧНОСТНОГО ОПРОСНИКА Р. КЭТТЕЛЛА 13PF",
+        title: "ВЫЯВЛЯЕМ ВАШИ ФИЗИОЛОГИЧЕСКИЕ ОСОБЕННОСТИ",
         tip: "Внимательно прочитай каждое неоконченное предложение и предлагаемый вариант ответа к нему.",
         testItems: JSON.parse(JSON.stringify(testThreeItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "radio",
         result: null,
     },
     {
-        title: "УРОВЕНЬ ЗНАНИЙ И УМЕНИЙ, СТИЛЬ ОБУЧЕНИЯ, ПРОДУКТИВНОЕ ВРЕМЯ",
+        title: "ВЫСТРАИВАЕМ ПЕРСОНАЛЬНУЮ ДИАГРАММУ ПРОДУКТИВНОСТИ",
         tip: "Внимательно прочитай каждое предложение и выбери предлагаемый вариант ответа к нему.",
         testItems: JSON.parse(JSON.stringify(testFourItems)),  // копия из реальных данных, т.к требуется обнулять
         testType: "radio",
         result: null,
     },
 ];
+
 let testsResult;
 // функция для рестарта(обнуление)
 function testRestart(){
@@ -216,6 +217,7 @@ function testFourResulting(){
     return max(results);
 }
 
+
 // рендеринг тестов(при загрузке и клике на кнопки)
 function testRender(){
     // когда activeTest больше чем всего тестов, тест пройден
@@ -228,9 +230,31 @@ function testRender(){
         const testThreeResult = testThreeResulting();
         const testFourResult = testFourResulting();
 
-        const testsResultTitle = document.querySelector('.result__title');
-        const testsResultStr = `${keyToString.human[testOneResult] || ""} – ${testThreeResult.map(socialKey => keyToString.social[socialKey]).join(" – ")} – ${keyToString.motivation[testTwoResult] || ""}`
-        testsResultTitle.innerHTML = testsResultStr;
+        function createResultItem(content){
+            const testResultItem = document.createElement('li');
+            testResultItem.classList.add('result__item');
+            testResultItem.innerHTML = content || "";
+            return testResultItem;
+        }
+
+        const testHumanResultItems = document.querySelector('.result__human-items');
+        testHumanResultItems.innerHTML = "";
+        const testSocialResultItems = document.querySelector('.result__social-items');
+        testSocialResultItems.innerHTML = "";
+        const testMotivationResultItems = document.querySelector('.result__motivation-items');
+        testMotivationResultItems.innerHTML = "";
+        
+        testHumanResultItems.insertAdjacentElement('beforeend', createResultItem(keyToString.human[testOneResult]));
+
+        testThreeResult.forEach(itemRes => {
+            testSocialResultItems.insertAdjacentElement('beforeend', createResultItem(keyToString.social[itemRes]));
+        });
+
+        testMotivationResultItems.insertAdjacentElement('beforeend', createResultItem(keyToString.motivation[testTwoResult]));
+
+        // const testsResultTitle = document.querySelector('.result__title');
+        // const testsResultStr = `${keyToString.human[testOneResult] || ""} – ${testThreeResult.map(socialKey => keyToString.social[socialKey]).join("<br>– ")} – ${keyToString.motivation[testTwoResult] || ""}`
+        // testsResultTitle.innerHTML = testsResultStr;
 
         resultRecomendation = [];
 
@@ -247,6 +271,14 @@ function testRender(){
         testsResultDiagrams.forEach(diagram => diagram.classList.remove("_active"));
         const testsResultDiagram = document.querySelector(`.result__diagram img#diagram${testFourResult}`);
         testsResultDiagram.classList.add('_active');
+
+        const testNum = document.querySelector('.test_num');
+        testNum.innerHTML = 100;
+
+        const testTitle = document.querySelector('.test_title');
+        testTitle.innerHTML = "РЕЗУЛЬТАТЫ АНАЛИЗА";
+
+
     } else {
         const testNum = document.querySelector('.test_num');
         const testTitle = document.querySelector('.test_title');
@@ -256,7 +288,7 @@ function testRender(){
         const testItemCurrent = document.querySelector('.test_current');
         const testItemTotal = document.querySelector('.test_total');
 
-        testNum.innerHTML = activeTest + 1;
+        testNum.innerHTML = activeTest / tests.length * 100;
         testTitle.innerHTML = tests[activeTest].title;
         testTip.innerHTML = tests[activeTest].tip;
 
