@@ -22,118 +22,53 @@
             </div>
         </header>
         <main>
-            <section class="tests">
-                <div class="tests__body _container">
-                    <div class="tests__content">
+            <section class="page">
+                <div class="page__body _container">
+                    <div class="page__content">
                         <div class="tests__preview">
                             <h1 class="title__sub">
                                 Цифровой помощник для персонализации обучения
                             </h1>
                         </div>
-                        <div class="tests__wrapper">
-                            <div class="tests__case test">
-                                <div class="test__wrapper">
-                                    <div class="test__header">
-                                        <div class="test__title">
-                                            <div class="test__title-content test_title">
-                                                <!-- через js -->
-                                            </div>
-                                            <div class="test__title-num">
-                                                <!-- через js -->
-                                                <div class="test__decor">
-                                                    <div class="tests__counter">
-                                                        <span class="test_num">25</span>%
-                                                    </div>
-                                                    <img src="./static/img/circle.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="test__tip test_tip">
-                                            <!-- через js -->
-                                        </div>
-
-                                    </div>
-                                    <div class="test__body">
-                                        <div class="test__question test_question">
-                                        </div>
-                                        <div class="test__answers">
-                                            <ol class="test-answers answer__items items anwer_items" data-test-type="">
-                                                <!-- через js -->
-                                           </ol>
-                                        </div>
-                                        <div class="test__tools">
-                                            <div class="test__btn test_prev" id="test_prev">
-                                                < назад
-                                            </div>
-                                            <div class="test__counter">
-                                                <span class="test__counter-currnet test_current">
-                                                    <!-- через js -->
-                                                </span>
-                                                /
-                                                <span class="test__counter-total test_total">
-                                                    <!-- через js -->
-                                                </span>
-                                            </div>
-                                            <div class="test__btn test_next" id="test_next">
-                                                дальше >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="result test__result">
-                                        <div class="result__presub">
-                                            Вами были определлены следующие характеристики:
-                                        </div>
-                                        <h2 class="result__title">
-                                            <div class="result__block result__human">
-                                                <h3 class="result__subtitle">
-                                                    Способности и предпочтения:
-                                                </h3>
-                                                <ul class="result__items result__human-items">
-
-                                                </ul>
-                                            </div>
-                                            <div class="result__block result__social">
-                                                <h3 class="result__subtitle">
-                                                    Физиологические особенности:
-                                                </h3>
-                                                <ul class="result__items result__social-items">
-                                                    
-                                                </ul>
-                                            </div>
-                                            <div class="result__block result__motivation">
-                                                <h3 class="result__subtitle">
-                                                    Уровень мотивации обучения:
-                                                </h3>
-                                                <ul class="result__items result__motivation-items">
-                                                    
-                                                </ul>
-                                            </div>
-                                            <!-- через js -->
-                                        </h2>
-                                        <div class="result__diagram">
-                                            <img src="./static/img/1.JPG" id="diagram1" alt="">
-                                            <img src="./static/img/2.JPG" id="diagram2" alt="">
-                                            <img src="./static/img/3.JPG" id="diagram3" alt="">
-                                        </div>
-                                        <div class="result__text">
-                                            <!-- через js -->
-
-                                        </div>
-                                        <div class="test__restart restart_btn">
-                                            пройти заново
-                                        </div>
-                                    </div>
+                        <div class="page__flexbox">
+                            <div class="page__flexbox-left">
+                                <div class="page__text">
+                                    <p class="page__item">
+                                        Добро пожаловать на сайт цифрового помощника StudyMate для персонализации вашего обучения в школе! 
+                                    </p>
+                                    <p class="page__item">
+                                        Мы рады видеть вас здесь! Наш цифровой помощник создан, чтобы помочь каждому ученику раскрыть свой потенциал и добиться успеха в учебе. С помощью современных технологий и индивидуального подхода, мы предлагаем уникальные рекомендации для построения персонализированных образовательных маршрутов, адаптированных под потребности и способности каждого школьника. 
+                                    </p>
+                                    <p class="page__item">
+                                        Уделите немного своего времени <b>StudyMate</b> и откройте для себя новые возможности в обучении! Мы верим, что с нашим цифровым помощником каждый ученик сможет учиться с удовольствием и вдохновением. 
+                                    </p>
+                                    <p class="page__item">
+                                        Добро пожаловать и удачи в ваших образовательных достижениях!
+                                    </p>
+                                </div>
+                                <div class="page__btn">
+                                    <a href="./static/pages/test.html" class="page__testing-btn">Создать рекомендацию</a>
                                 </div>
                             </div>
+                            <div class="page__flexbox-right">
+                                <span class="page__decor" id="d1">
+                                    
+                                </span>
+                                <div class="page__mainimg">
+                                    <img src="./static/img/robot.png" alt="">
+                                </div>
+                                <span class="page__decor" id="d2">
+
+                                </span>
+                                <span class="page__decor" id="d3">
+                                    
+                                </span>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </section>
-            <button class="cheat_btn">cheat</button>
-            <button class="cheat_btn" id="test1">test1</button>
-            <button class="cheat_btn" id="test2">test2</button>
-            <button class="cheat_btn" id="test3">test3</button>
-            <button class="cheat_btn" id="test4">test4</button>
         </main>
         <footer>
 
