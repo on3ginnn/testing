@@ -316,6 +316,16 @@ section{
 }
 /*--------adaptive---------*/
 @media(max-width:480px){
+    .page__flexbox-right{
+        display: none;
+    }
+    .page__testing-btn{
+        width: 100%;
+        text-align: center;
+    }
+    .page__flexbox-left{
+        padding-right: 0;
+    }
     .header__content {
         padding: 30px 0;
     }
